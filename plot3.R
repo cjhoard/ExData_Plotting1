@@ -15,7 +15,7 @@ powerdat<-subset(data,Date=="1/2/2007"|Date=="2/2/2007")
 powerdat$datetime<-dmy_hms(paste(powerdat$Date,powerdat$Time,sep=' '))
 
 #Build the time series of global active power from 2/1-2/2/2007
-png(filename="plot3.png",width = 480, height = 480, units = "px", pointsize = 12,type="windows")
+png(filename="plot3.png",width = 480, height = 480, units = "px", pointsize = 12,type="cairo")
 with(powerdat, plot(datetime,Sub_metering_1,ylab='Energy sub metering',xlab='',type='l'))
 with(powerdat, lines(datetime,Sub_metering_2,ylab='Energy sub metering',xlab='',col='#FF2500'))
 with(powerdat, lines(datetime,Sub_metering_3,ylab='Energy sub metering',xlab='',col='blue'))

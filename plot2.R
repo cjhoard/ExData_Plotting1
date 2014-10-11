@@ -16,6 +16,6 @@ powerdat$datetime<-dmy_hms(paste(powerdat$Date,powerdat$Time,sep=' '))
 
 
 #Build the time series of global active power from 2/1-2/2/2007
-png(filename="plot2.png",width = 480, height = 480, units = "px", pointsize = 12,type="windows")
+png(filename="plot2.png",width = 480, height = 480, units = "px", pointsize = 12,type="cairo")
 plot(powerdat$datetime,powerdat$Global_active_power,type="l",ylab="Global Active Power (kilowatts)",xlab='')
 dev.off()

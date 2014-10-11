@@ -16,6 +16,6 @@ powerdat$datetime<-dmy_hms(paste(powerdat$Date,powerdat$Time,sep=' '))
 
 
 #Build the histogram of global active power
-png(filename="plot1.png",width = 480, height = 480, units = "px", pointsize = 12,type="windows")
+png(filename="plot1.png",width = 480, height = 480, units = "px", pointsize = 12,type="cairo")
 hist(powerdat$Global_active_power,col='#FF2500',main="Global Active Power",xlab="Global Active Power (kilowatts)")
 dev.off()
