@@ -23,5 +23,5 @@ with(powerdat, plot(datetime,Sub_metering_1,ylab='Energy sub metering',xlab='',t
 with(powerdat, lines(datetime,Sub_metering_2,ylab='Energy sub metering',xlab='',col='#FF2500'))
 with(powerdat, lines(datetime,Sub_metering_3,ylab='Energy sub metering',xlab='',col='blue'))
 legend('topright',lty=c(1,1,1),col=c('black','#FF2500','blue'),legend=c('Sub_metering_1','Sub_metering_2','Sub_metering_3'))
-plot(powerdat$datetime,powerdat$Global_reactive_power,type="l",lwd=0.5,ylab="Global_reactive_power",xlab='datetime')
+plot(powerdat$datetime,powerdat$Global_reactive_power,type="l",lwd=0.7,ylab="Global_reactive_power",xlab='datetime')
 dev.off()
